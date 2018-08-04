@@ -57,6 +57,7 @@ before_install:
   - tlmgr update --all
   - sudo apt-get update
   - sudo apt-get install texlive-bibtex-extra
+  - sudo apt-get install ghostscript
 
 install: echo Installation step #do not remove this line!
 
@@ -68,12 +69,11 @@ before_script:
     - export PATH=$PATH:$PWD
     - tlmgr update biber
     - Rscript -e 'if (!requireNamespace("devtools", quietly = TRUE)) install.packages("devtools")'
-    - Rscript -e 'if (!requireNamespace("fastmatch", quietly = TRUE)) install.packages(c("fastmatch", "knitr"))'
     - Rscript -e 'if (!requireNamespace("data.table", quietly = TRUE)) install.packages(c("data.table"))'
     - Rscript -e 'if (!requireNamespace("magrittr", quietly = TRUE)) install.packages(c("magrittr"))'
-    - Rscript -e 'devtools::install_github("hughparsonage/hutils")'
-    - Rscript -e 'devtools::install_github("hughparsonage/TeXCheckR")'
-    - Rscript -e 'devtools::install_github("hughparsonage/grattanReporter")'
+    - Rscript -e 'devtools::install_github("hughparsonage/hutils", quick = TRUE)'
+    - Rscript -e 'devtools::install_github("hughparsonage/TeXCheckR", quick = TRUE)'
+    - Rscript -e 'devtools::install_github("hughparsonage/grattanReporter", quick = TRUE)'
 
 script: 
   - set -e
