@@ -1,7 +1,7 @@
 # zzz-2018-Transport-Discount-rates
 Unfreezing discount rates: transport infrastructure for tomorrow. Report 2018-03
 
-by (Marion Terrill)[https://grattan.edu.au/people/bio/marion-terrill/] and (Hugh Batrouney)[https://grattan.edu.au/people/bio/hugh-batrouney/]
+by [Marion Terrill](https://grattan.edu.au/people/bio/marion-terrill/) and [Hugh Batrouney](https://grattan.edu.au/people/bio/hugh-batrouney/)
 
 Australia should revamp how it selects major transport projects, so that governments can better know which new roads and railways are worth building and avoid squandering billions of dollars of public money on the wrong projects.
 
