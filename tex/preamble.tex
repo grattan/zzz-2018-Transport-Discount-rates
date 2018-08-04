@@ -1,0 +1,26 @@
+\usepackage{environ}
+\makeatletter
+\newsavebox{\measure@tikzpicture}
+\NewEnviron{scaletikzpicturetowidth}[1]{%
+  \def\tikz@width{#1}%
+  \def\tikzscale{1}\begin{lrbox}{\measure@tikzpicture}%
+  \BODY
+  \end{lrbox}%
+  \pgfmathparse{#1/\wd\measure@tikzpicture}%
+  \edef\tikzscale{\pgfmathresult}%
+  \BODY
+}
+\makeatother
+
+\usepackage{pgfplots}
+% Aspect ratio by inspection
+\pgfplotsset{width=\columnwidth, height=0.66\columnwidth, compat=1.9}
+
+
+
+% Appendix
+\usepackage{longtable}
+\usepackage{nameref}
+
+\LTchunksize=100
+\providecommand{\xtablewidth}{\linewidth}
